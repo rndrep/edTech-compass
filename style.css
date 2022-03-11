@@ -1,0 +1,161 @@
+.container__compass_overflow {
+	overflow: hidden;
+}
+
+.container__compass-title {
+	display: flex;
+	justify-content: center;
+	margin-bottom: 8px;
+	text-shadow: 2px 2px 3px #6c757d;
+	font-weight: 500;
+	color: #333f50;
+	z-index: 5;
+}
+
+.compass__title-title .gray {
+	font-weight: 800;
+	color: #595959;
+}
+
+.container__compass-title .green {
+	font-weight: 800;
+	color: #82950f;
+}
+
+.compass-wrapper {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+}
+
+.compass-wrapper__background {
+	content: "";
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	z-index: 0;
+	top: 0;
+	transform: translateX(50%);
+	background-color: #e2f0d9;
+}
+
+.compass {
+	width: 100%;
+	padding-top: 100%;
+	display: flex;
+	justify-content: center;
+	position: relative;
+	background: center / contain no-repeat
+		url("data:image/svg+xml, %3Csvg width='705' height='705' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none'%3E%3Cg stroke='%23006837' stroke-width='2'%3E%3Cpath d='M216.82 676.84c86.603 36.184 184.76 36.186 271.35-.01M676.84 488.18c36.206-86.607 36.206-184.76.01-271.35M28.154 488.18c-36.204-86.605-36.204-184.76 0-271.36M216.82 28.149c86.607-36.206 184.76-36.206 271.36 0'%3E%3C/path%3E%3C/g%3E%3Cg transform='translate(55 55) scale(2.5022)' fill-rule='evenodd' stroke='%23006837' stroke-linecap='square' stroke-width='.8'%3E%3Cpath d='M118.73-.00068931l-.00522 20.881M118.73 213.12l-.0115 19.087-.00073 1.7944'%3E%3C/path%3E%3Cg transform='translate(0 1)'%3E%3Cpath d='M-.00067689 117.37l21.121-.02034M213.12 117.36l21.121.003'%3E%3C/path%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+
+	border-radius: 50%;
+	z-index: 5;
+}
+
+.compass__outer {
+	height: auto;
+	width: 705px;
+	z-index: 1;
+	position: relative;
+}
+
+.compass__arrow {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	transition: transform 0.8s ease-in-out;
+	z-index: 5;
+	width: 70%;
+	height: 70%;
+}
+
+.compass__button {
+	background-color: #b0cec096;
+	color: #2a8057;
+	text-decoration: none;
+	width: 25%;
+	height: 25%;
+	border-radius: 100%;
+	position: absolute;
+	z-index: 10;
+	transition: all 0.3s ease-out;
+}
+
+.compass__button svg {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	width: 80%;
+	height: 80%;
+}
+
+.compass__button:hover {
+	text-decoration: none;
+	color: #65a738;
+}
+
+.compass__button:before {
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	opacity: 0;
+	border-radius: 100%;
+	background: linear-gradient(154deg, #00683785, #b0cec096);
+	transition: all 0.2s ease-in-out;
+}
+
+.compass__button:hover:before {
+	opacity: 1;
+}
+
+.compass-button-1 {
+	right: 5%;
+	top: 5%;
+}
+
+.compass-button-2 {
+	right: 5%;
+	bottom: 5%;
+}
+
+.compass-button-3 {
+	left: 5%;
+	bottom: 5%;
+}
+
+.compass-button-4 {
+	left: 5%;
+	top: 5%;
+}
+
+.compass__tooltip {
+	position: absolute;
+	text-align: center;
+	font-size: 1.1rem;
+	bottom: 0;
+	transform: translateY(100%) translateX(-50%);
+	left: 50%;
+	line-height: 120%;
+	min-width: 100%;
+	padding-top: 0.2rem;
+	font-weight: 500;
+}
+
+@media (max-width: 1200px) {
+	.compass__tooltip {
+		font-size: calc(0.68125rem + 0.375vw);
+	}
+}
+
+@media (max-width: 768px) {
+	.compass__tooltip {
+		font-size: calc(0.58125rem + 0.375vw);
+	}
+}
